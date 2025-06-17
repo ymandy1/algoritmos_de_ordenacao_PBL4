@@ -37,17 +37,18 @@ public class Main extends SortAlgorithms {
             long inicioBubble = System.nanoTime();
             bubbleSort(bubble);
             long fimBubble = System.nanoTime();
-            System.out.printf("Resultado de tempo de processamento do Bubble Sort: %.2f ms\n", (fimBubble - inicioBubble) / 1e6);
+            System.out.printf("Resultado de tempo de processamento do Bubble Sort: %d ns\n", (fimBubble - inicioBubble));
 
             long inicioInsertion = System.nanoTime();
             insertionSort(insertion);
             long fimInsertion = System.nanoTime();
-            System.out.printf("Resultado de tempo de processamento do Insertion Sort: %.2f ms\n", (fimInsertion - inicioInsertion) / 1e6);
+            System.out.printf("Resultado de tempo de processamento do Insertion Sort: %d ns\n",
+                    (fimInsertion - inicioInsertion));
 
             long inicioQuick = System.nanoTime();
             quickSort(quick, 0, quick.length - 1);
             long fimQuick = System.nanoTime();
-            System.out.printf("Resultado de tempo de processamento do Quick Sort: %.2f ms\n", (fimQuick - inicioQuick) / 1e6);
+            System.out.printf("Resultado de tempo de processamento do Quick Sort: %d ns\n", (fimQuick - inicioQuick));
         }
     }
 }
